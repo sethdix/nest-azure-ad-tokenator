@@ -1,4 +1,4 @@
-version: 1
+version: 2
 jobs:
   build:
     docker:
@@ -55,7 +55,7 @@ jobs:
           command: |
             npx semantic-release
 workflows:
-  version: 1
+  version: 2
   test_and_release:
     jobs:
       - build

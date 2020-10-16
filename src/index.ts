@@ -1,1 +1,1 @@
-export * from './sftp';
+export * from './azure-client-credentials';

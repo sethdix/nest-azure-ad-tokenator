@@ -1,14 +1,15 @@
 {
   "name": "nest-azure-ad-tokenator",
   "author": "Seth Dix",
-  "description": "Nest Framework modules for requesting tokens from Azure AD based on scope (service requests vs user requests)",
+  "description": "Nest Framework modules for requesting tokens from Azure AD client credential JWT tokens",
   "license": "MIT",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "keywords": [
     "nest",
     "azure",
-    "lambda"
+    "lambda",
+    "client credentials flow"
   ],
   "homepage": "https://github.com/sethdix/nest-azure-ad-tokenator",
   "bugs": {
@@ -37,10 +38,10 @@
   "dependencies": {
     "@nestjs/common": "^7.0.7",
     "@nestjs/core": "^7.0.7",
+    "querystring": "^0.2.0",
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.2",
-    "rxjs": "^6.5.4",
-    "ssh2-sftp-client": "^5.1.2"
+    "rxjs": "^6.5.4"
   },
   "devDependencies": {
     "@nestjs/testing": "7.0.7",
@@ -48,7 +49,6 @@
     "@semantic-release/git": "^9.0.0",
     "@types/jest": "25.1.4",
     "@types/node": "^12.7.5",
-    "@types/ssh2-sftp-client": "^4.1.3",
     "@types/supertest": "2.0.8",
     "import-sort-style-eslint": "^6.0.0",
     "husky": "^4.2.3",
@@ -170,6 +170,5 @@
     },
     "coverageDirectory": "../coverage",
     "testEnvironment": "node"
-  },
-  "version": "1.0.1"
+  }
 }
