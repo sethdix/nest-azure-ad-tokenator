@@ -18,27 +18,28 @@ $ npm install --save nest-azure-ad-tokenator
 
 # TODO: update the commented out section with correct documentation
 
-<!-- ## Register in AppModule
+## Register in AppModule
 
-Register the SftpModule in your App Module.
+Register the AzureClientCredentialsModule in your App Module.
 
 This version uses forRootAsync
 
 ```typescript
-import { SftpModule } from 'nest-sftp';
+import { AzureClientCredentialsModule } from 'nest-azure-ad-tokenator';
 
 @Module({
   imports: [
-    SftpModule.forRootAsync(
-      {
-        useFactory: (configService: ConfigService) => {
-          return configService.getSftpConnectionInfo();
-        },
-        inject: [ConfigService],
-        imports: [AppModule],
+    AzureClientCredentialsModule.forRootAsync({
+      useFactory: (configService: ConfigService) => {
+        return {
+          applicationId: configService.get('APPLICATION_ID'),
+          tenantId: configService.get('TENANT_ID'),
+          clientSecret: configService.get('CLIENT_SECRET'),
+        };
       },
-      false,
-    ),
+      inject: [ConfigService],
+      imports: [AppModule],
+    }),
   ],
   controllers: [],
   providers: [ConfigService],
@@ -47,84 +48,19 @@ import { SftpModule } from 'nest-sftp';
 export class AppModule {}
 ```
 
-The Options object implements the ConnectConfig from ssh2.
+# Usage of the service
 
 ```typescript
-import { SftpModule } from 'nest-sftp';
+export class AuthClient {
+  constructor(
+    private readonly azureClientCredentialsService: AzureClientCredentialsService,
+  ) {}
 
-@Module({
-  imports: [
-    SftpModule.forRoot(
-      {
-        host: 'fakehost.com',
-        port: 22,
-        username: 'fakeUser',
-        password: '*****', // passwords should not contain \ (thy should be espaced like \\) and they cannot contain ! or (
-      },
-      false,
-    ),
-  ],
-  controllers: [],
-  providers: [],
-})
-export class AppModule {}
-```
-
-With debug logging:
-
-```typescript
-import { SftpModule } from 'nest-sftp';
-
-@Module({
-  imports: [
-    SftpModule.forRoot(
-      {
-        host: 'fakehost.com',
-        port: 22,
-        username: 'fakeUser',
-        password: '*****', // passwords should not contain \ (thy should be espaced like \\) and they cannot contain ! or (
-        debug: console.log, // adds logging for researching problems
-      },
-      false,
-    ),
-  ],
-  controllers: [],
-  providers: [],
-})
-export class AppModule {}
-```
-
-## Dependency Inject Service
-
-The SftpModule is global. The forRoot() method will open the connection as well during AppModule registration.
-Then the SftpClientService can be injected into your class.
-
-```typescript
-import { SftpClientService } from 'nest-sftp';
-
-export class AppService {
-  private readonly logger: Logger;
-  constructor(private readonly sftpClient: SftpClientService) {
-    logger = new Logger();
-  }
-
-  async download(
-    remotePath: string,
-    localPath: string,
-  ): Promise<string | NodeJS.ReadableStream | Buffer> {
-    return await this.sftpClient.download(remotePath, localPath);
-  }
-  // change connection to a different user/password prior to upload
-  async submit(
-    remotePath: string,
-    localPath: string,
-    submitConfig: ConnectConfig,
-  ): Promise<string | NodeJS.ReadableStream | Buffer> {
-    await this.sftpClient.resetConnection(submitConfig);
-    return await this.sftpClient.upload(remotePath, localPath);
+  async getToken() {
+    return await this.azureClientCredentialsService.getClientCredentialsToken();
   }
 }
-``` -->
+```
 
 ## Support
 
