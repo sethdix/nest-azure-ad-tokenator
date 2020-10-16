@@ -1,25 +1,25 @@
 {
-  "name": "nest-sftp",
-  "author": "Benjamin Main",
-  "description": "Nest Framework wrapper around ssh2-sftp-client",
+  "name": "nest-azure-ad-tokenator",
+  "author": "Seth Dix",
+  "description": "Nest Framework modules for requesting tokens from Azure AD based on scope (service requests vs user requests)",
   "license": "MIT",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "keywords": [
     "nest",
-    "sftp",
+    "azure",
     "lambda"
   ],
-  "homepage": "https://github.com/benMain/nest-sftp",
+  "homepage": "https://github.com/sethdix/nest-azure-ad-tokenator",
   "bugs": {
-    "url": "https://github.com/benMain/nest-sftp/issues"
+    "url": "https://github.com/sethdix/nest-azure-ad-tokenator/issues"
   },
   "files": [
     "dist"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/benMain/nest-sftp.git"
+    "url": "https://github.com/sethdix/nest-azure-ad-tokenator.git"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
@@ -67,7 +67,7 @@
     "typescript": "3.8.3"
   },
   "release": {
-    "branch": "master",
+    "branch": "main",
     "plugins": [
       [
         "@semantic-release/commit-analyzer",
@@ -171,5 +171,5 @@
     "coverageDirectory": "../coverage",
     "testEnvironment": "node"
   },
-  "version": "1.1.1"
+  "version": "1.0.1"
 }

@@ -1,22 +1,26 @@
 <p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://blogs.mulesoft.com/wp-content/uploads/2017/11/sftp-ftp-mulesoft-connector-anypoint.png" /></a>
+  <a href="http://nestjs.com/" target="blank"><img src="./resources/nestjs.png" /><img src="./resources/azure-ad.png" /></a>
 </p>
 
-# NEST SFTP
+# NEST Azure AD Tokenator
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework module wrapper around [ssh2-sftp-client](https://github.com/jyu213/ssh2-sftp-client)
+[Nest Framework](https://github.com/nestjs/nest) modules for requesting tokens from [Azure AD](https://azure.microsoft.com/en-us/services/active-directory/) based on scope (service requests vs user requests)
+
+Scaffolded from [nest-sftp](https://github.com/benMain/nest-sftp) (Nest framework module wrapper around [ssh2-sftp-client](https://github.com/theophilusx/ssh2-sftp-client)).
 
 ## Installation
 
 ```bash
-$ npm install --save nest-sftp
+$ npm install --save nest-azure-ad-tokenator
 ```
 
-## Register in AppModule
+# TODO: update the commented out section with correct documentation
 
-Register the SftpModule in you App Module.
+<!-- ## Register in AppModule
+
+Register the SftpModule in your App Module.
 
 This version uses forRootAsync
 
@@ -120,7 +124,7 @@ export class AppService {
     return await this.sftpClient.upload(remotePath, localPath);
   }
 }
-```
+``` -->
 
 ## Support
 
@@ -128,9 +132,8 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 
 ## Stay in touch
 
-- Author - [Benjamin Main](mailto::bmain@lumeris.com)
-- Author - [Victor Frank](mailto::vfrank@lumeris.com)
+- Author - [Seth Dix](mailto::sdix@lumeris.com)
 
 ## License
 
-Nest SFTP is [MIT licensed](LICENSE).
+NEST Azure AD Tokenator is [MIT licensed](LICENSE).

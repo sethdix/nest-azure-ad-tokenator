@@ -1,4 +1,4 @@
-version: 2
+version: 1
 jobs:
   build:
     docker:
@@ -55,7 +55,7 @@ jobs:
           command: |
             npx semantic-release
 workflows:
-  version: 2
+  version: 1
   test_and_release:
     jobs:
       - build
@@ -64,4 +64,4 @@ workflows:
             - build
           filters:
             branches:
-              only: master
+              only: main
