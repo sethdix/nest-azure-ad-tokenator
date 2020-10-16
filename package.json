@@ -67,7 +67,9 @@
     "typescript": "3.8.3"
   },
   "release": {
-    "branch": "main",
+    "branches": [
+      "main"
+    ],
     "plugins": [
       [
         "@semantic-release/commit-analyzer",
@@ -127,6 +129,12 @@
             "CHANGELOG.md"
           ],
           "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+        }
+      ],
+      [
+        "@semantic-release/github",
+        {
+          "assets": "dist/*.tgz"
         }
       ]
     ]
