@@ -16,8 +16,6 @@ Scaffolded from [nest-sftp](https://github.com/benMain/nest-sftp) (Nest framewor
 $ npm install --save nest-azure-ad-tokenator
 ```
 
-# TODO: update the commented out section with correct documentation
-
 ## Register in AppModule
 
 Register the AzureClientCredentialsModule in your App Module.
