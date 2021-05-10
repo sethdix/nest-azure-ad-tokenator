@@ -46,7 +46,7 @@ import { AzureClientCredentialsModule } from 'nest-azure-ad-tokenator';
 export class AppModule {}
 ```
 
-# Usage of the service
+## Usage
 
 ```typescript
 export class AuthClient {
@@ -66,7 +66,7 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 
 ## Stay in touch
 
-- Author - [Seth Dix](mailto::sdix@lumeris.com)
+- Author - [Seth Dix](mailto:sdix@lumeris.com)
 
 ## License
 
