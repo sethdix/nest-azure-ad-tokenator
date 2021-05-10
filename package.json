@@ -156,8 +156,7 @@
       "jest --findRelatedTests"
     ],
     "./**/*.{js,json,css,md}": [
-      "prettier --write \"src/**/*.ts\"",
-      "git add"
+      "prettier --write \"src/**/*.ts\""
     ]
   },
   "importSort": {
