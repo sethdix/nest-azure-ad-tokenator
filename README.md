@@ -1,5 +1,6 @@
 <p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="./resources/nestjs.png" /><img src="./resources/azure-ad.png" /></a>
+  <a href="http://nestjs.com/" target="blank"><img src="./resources/nestjs.png" /></a>
+  <a href="https://docs.microsoft.com/en-us/azure/active-directory/" target="blank"><img src="./resources/azure-ad.png" /></a>
 </p>
 
 # NEST Azure AD Tokenator
