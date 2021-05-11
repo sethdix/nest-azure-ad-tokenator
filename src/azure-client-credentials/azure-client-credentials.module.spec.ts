@@ -33,7 +33,7 @@ class TestRootModuleAsync {}
 
 describe('AzureClientCredentialsModule', () => {
   describe('forRootAsync()', () => {
-    it('should instantiate', async () => {
+    it('should instantiate?', async () => {
       jest.setTimeout(30000);
       process.env.APPLICATION_ID = ''; // replace with your client_id and uncomment lines 48-50
       process.env.TENANT_ID = ''; // replace with your tenant_id and uncomment lines 48-50
