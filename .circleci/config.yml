@@ -5,6 +5,9 @@ jobs:
       - image: cimg/node:16.19
     working_directory: ~/repo
     steps:
+      - add_ssh_keys:
+        fingerprints:
+          - "6d:cf:f9:d6:76:98:46:4e:43:7a:68:6c:2a:c7:ef:20"
       - checkout
       - restore_cache:
           keys:
