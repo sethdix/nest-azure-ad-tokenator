@@ -3,7 +3,7 @@ import { Test, TestingModule } from '@nestjs/testing';
 import { AzureClientCredentialsModuleParameters } from './azure-client-credentials-module-parameters';
 import { AzureClientCredentialsResponse } from './azure-client-credentials-response.interface';
 import { AzureClientCredentialsService } from './azure-client-credentials.service';
-import { HttpService } from '@nestjs/common';
+import { HttpService } from '@nestjs/axios';
 
 describe('AzureClientCredentialsService', () => {
   let service: AzureClientCredentialsService;

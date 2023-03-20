@@ -1,8 +1,9 @@
 import { AsyncProvider, ImportableFactoryProvider } from './async-types';
-import { DynamicModule, Global, HttpModule, Module } from '@nestjs/common';
+import { DynamicModule, Global, Module } from '@nestjs/common';
 
 import { AzureClientCredentialsModuleParameters } from './azure-client-credentials-module-parameters';
 import { AzureClientCredentialsService } from './azure-client-credentials.service';
+import { HttpModule } from '@nestjs/axios';
 
 @Global()
 @Module({
