@@ -22,7 +22,7 @@ jobs:
       - run:
           name: Build
           command: |
-            npm run build-
+            npm run build
       - run:
           name: Test
           command: |
