@@ -37,8 +37,8 @@ jobs:
     working_directory: ~/repo
     steps:
       - uses: actions/checkout@v3
-        with:
-          token: ${{ secrets.GH_TOKEN }}
+          with:
+            token: ${{ secrets.GH_TOKEN }}
       - checkout
       - restore_cache:
           keys:
