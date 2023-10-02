@@ -1,3 +1,5 @@
+# [3.0.0](https://github.com/sethdix/nest-azure-ad-tokenator/compare/v2.0.0...v3.0.0) (2023-10-02)
+
 # [2.0.0](https://github.com/sethdix/nest-azure-ad-tokenator/compare/v1.0.4...v2.0.0) (2023-04-26)
 
 ## [1.0.4](https://github.com/sethdix/nest-azure-ad-tokenator/compare/v1.0.3...v1.0.4) (2021-05-11)
