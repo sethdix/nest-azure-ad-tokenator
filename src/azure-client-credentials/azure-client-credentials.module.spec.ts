@@ -38,9 +38,8 @@ describe('AzureClientCredentialsModule', () => {
       process.env.APPLICATION_ID = ''; // replace with your client_id and uncomment lines 48-50
       process.env.TENANT_ID = ''; // replace with your tenant_id and uncomment lines 48-50
       process.env.CLIENT_SECRET = ''; // replace with your client_secret and uncomment lines 48-50
-      const module = await NestFactory.createApplicationContext(
-        TestRootModuleAsync,
-      );
+      const module =
+        await NestFactory.createApplicationContext(TestRootModuleAsync);
       const service = module.get<AzureClientCredentialsService>(
         AzureClientCredentialsService,
       );
